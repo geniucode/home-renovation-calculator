@@ -70,8 +70,6 @@ export default function Home() {
   const onClickShowResult = () => {
     router.push("/result");
   };
-  console.log(Object.values(questionAtom).filter(Boolean));
-  console.log(Object.values(questionAtom).filter(Boolean).length);
   return (
     <div className={styles.container}>
       <Head>
@@ -101,7 +99,6 @@ export default function Home() {
               renderQuestion(question, index)
             );
           })}
-          {/* {!!renderQuestion() && renderQuestion()} */}
           <div className={styles.btnContainer}>
             {currentIndex > 0 && (
               <Button onClick={onClickBack} variant="contained">

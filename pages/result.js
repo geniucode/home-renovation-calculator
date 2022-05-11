@@ -17,15 +17,10 @@ export default function Result() {
         elem.showInResult
       ) {
         const result = elem.plan[questionAtom[elem.key]];
-        console.log({ result, elem });
         if (!isNaN(result)) {
           total += result;
         }
       } else if (elem.key !== BATHROOM_SIZE_KEY) {
-        console.log("123", elem.plan);
-        console.log("ABC", questionAtom[elem.key]);
-        console.log(elem.plan[questionAtom[elem.key]]);
-        console.log("DHF", questionAtom[elem.key]);
         const result =
           elem.plan[questionAtom[elem.key]?.text] *
           questionAtom[elem.key]?.space;
@@ -33,8 +28,6 @@ export default function Result() {
           total += result;
         }
       }
-
-      console.log("total,total", total);
     });
 
     setTotalPrice(total);
