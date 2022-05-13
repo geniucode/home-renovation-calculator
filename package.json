@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "hl": "heroku login",
-    "hr": "heroku git:remote -a aqar-api",
+    "hr": "heroku git:remote -a home-renovation-calculator",
     "hp": "git push heroku master"
   },
   "dependencies": {
