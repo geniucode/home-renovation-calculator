@@ -12,8 +12,7 @@ function DropdownWithInputSpace({
   const [textValue, setTextValue] = useState(defaultValue || 0);
   const [spaceValue, setSpaceValue] = useState(defaultValue || 0);
   return (
-    <div style={{ display: "flex" }}>
-      <div style={{ width: "80%" }}>
+    <div style={{ display: "flex" , flexDirection:"column" }}>
         <DropDownList
           row={row}
           saveData={(value) => {
@@ -24,8 +23,6 @@ function DropdownWithInputSpace({
             setTextValue(value);
           }}
         />
-      </div>
-      <div style={{ width: "20%" }}>
         <TextField
           label={row.title}
           variant="standard"
@@ -38,8 +35,8 @@ function DropdownWithInputSpace({
               space: e.target.value,
             });
           }}
+          style={{marginTop:40}}
         />
-      </div>
     </div>
   );
 }

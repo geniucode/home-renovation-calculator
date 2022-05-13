@@ -27,7 +27,7 @@ export const questions = [
       {
         order: 1,
         key: BUDGET_KEY,
-        title: "How much your budget?",
+        title: "How much is your budget?",
         componentType: textInput,
         componentProps: { type: "number" },
       },
@@ -139,11 +139,10 @@ export const questions = [
       {
         order: 2,
         key: BATHROOM_SIZE_KEY,
-        title: "what is the size of your bathroom?",
+        title: "What is the size of your bathroom?",
         componentType: dropdown,
         options: [Small, Medium, Large],
         showInResult: true,
-        hiddenNumber: true,
         result: "Bathroom size (USD)",
         plan: {
           [Small]: 9,

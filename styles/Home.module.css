@@ -101,7 +101,8 @@
   width: 100%;
 }
 .resultContainer > div {
-  width: 40%;
+  min-width:130px;
+  max-width:130px;
   border: 1px solid #000;
   padding: 10px;
 }
@@ -114,7 +115,8 @@
   width: 100%;
 }
 .resultItemContainer > div {
-  width: 40%;
+  min-width:130px;
+  max-width:130px;
   border: 1px solid #000;
   padding: 10px;
 }

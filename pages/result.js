@@ -3,6 +3,7 @@ import { BATHROOM_SIZE_KEY, BUDGET_KEY, questions } from "../data/questions";
 import styles from "../styles/Home.module.css";
 import { useRecoilState } from "recoil";
 import { questionState } from "../atoms/question.atom";
+import { numberWithCommas } from "../utils";
 export default function Result() {
   const [questionAtom] = useRecoilState(questionState);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -95,7 +96,7 @@ export default function Result() {
   return (
     <div className={styles.container}>
       Result
-      <div style={{ width: "80%" }}>
+      <div style={{ width: "95%" }}>
         <div className={styles.resultContainer}>
           <div>Prototype</div>
           <div>Type</div>
@@ -108,7 +109,7 @@ export default function Result() {
                 <div className={styles.resultItemContainer}>
                   <div>{getQuestion(key).result}</div>
                   <div>{getQuestionAnswer(key)}</div>
-                  <div>{getQuestionPrice(key)}</div>
+                  <div>{numberWithCommas(getQuestionPrice(key))}</div>
                 </div>
               )}
             </>
@@ -131,9 +132,11 @@ export default function Result() {
         ].join(" ")}
       >
         Total Price:{" "}
-        {totalPrice *
-          getQuestion(BATHROOM_SIZE_KEY).plan[questionAtom[BATHROOM_SIZE_KEY]]}
+        {numberWithCommas(totalPrice *
+          getQuestion(BATHROOM_SIZE_KEY).plan[questionAtom[BATHROOM_SIZE_KEY]])
+        }
       </div>
+  This amount is x{getQuestion(BATHROOM_SIZE_KEY).plan[questionAtom[BATHROOM_SIZE_KEY]]} for a {questionAtom[BATHROOM_SIZE_KEY]} Bathroom
     </div>
   );
 }
