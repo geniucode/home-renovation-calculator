@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "hl": "heroku login",
+    "hr": "heroku git:remote -a aqar-api",
+    "hp": "git push heroku master"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
