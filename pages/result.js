@@ -116,27 +116,41 @@ export default function Result() {
           );
         })}
       </div>
-      <div
-        className={[
-          styles.totalPrice,
-          userBudget >
-            totalPrice *
-              getQuestion(BATHROOM_SIZE_KEY).plan[
-                questionAtom[BATHROOM_SIZE_KEY]
-              ] && styles.green,
-          userBudget <
-            totalPrice *
-              getQuestion(BATHROOM_SIZE_KEY).plan[
-                questionAtom[BATHROOM_SIZE_KEY]
-              ] && styles.red,
-        ].join(" ")}
-      >
-        Total Price:{" "}
-        {numberWithCommas(totalPrice *
-          getQuestion(BATHROOM_SIZE_KEY).plan[questionAtom[BATHROOM_SIZE_KEY]])
-        }
+      <div style={{marginTop:20}}>
+        Total Price: {totalPrice}
       </div>
-  This amount is x{getQuestion(BATHROOM_SIZE_KEY).plan[questionAtom[BATHROOM_SIZE_KEY]]} for a {questionAtom[BATHROOM_SIZE_KEY]} Bathroom
+      This amount is x{getQuestion(BATHROOM_SIZE_KEY).plan[questionAtom[BATHROOM_SIZE_KEY]]} for a {questionAtom[BATHROOM_SIZE_KEY]} Bathroom
+      <div style={{ width: "95%" }}>
+        <div className={styles.resultContainer}>
+          <div
+        style={{width:200,minWidth:200,maxWidth:200, fontWeight:"bold"}}>Plan</div>
+          <div
+        style={{width:200,minWidth:200,maxWidth:200}}>Price</div>
+        </div>
+        {Object.entries(getQuestion(BATHROOM_SIZE_KEY).plan).map((plan) => {
+          console.log('plan', plan);
+          return (
+            <>
+            <div className={styles.resultItemContainer}
+        style={{width:200,minWidth:200,maxWidth:200}}>
+            <div
+        style={{width:200,minWidth:200,maxWidth:200}}>{plan[0]}</div>  
+             <div 
+        className={[
+          userBudget >
+            totalPrice *plan[1] && styles.green,
+          userBudget <
+            totalPrice *plan[1]&& styles.red,
+        ].join(" ")}
+        style={{width:200,minWidth:200,maxWidth:200}}
+        >{}
+             {numberWithCommas(totalPrice *plan[1])
+        }</div>
+            </div>
+            </>
+          );
+        })}
+      </div>
     </div>
   );
 }

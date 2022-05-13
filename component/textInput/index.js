@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Autocomplete, Box, TextField } from "@mui/material";
-import styles from "./style.module.css";
-
+import { TextField } from "@mui/material";
+import { numberWithCommas } from "../../utils";
 function TextInput({ row, saveData, defaultValue = "", ...props }) {
   const [dropDownValue, setDropDownValue] = useState(defaultValue || 0);
+
   return (
     <TextField
       {...props}
