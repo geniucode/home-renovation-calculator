@@ -51,7 +51,7 @@ export const questions = [
         componentType: dropdown,
         options: [Economy, Standard, Premium],
         showInResult: true,
-        result: "Sink (USD)",
+        result: "Toilet 🚽",
         plan: {
           [Economy]: 200,
           [Standard]: 1000,
@@ -65,7 +65,7 @@ export const questions = [
         componentType: dropdown,
         options: [Economy, Standard, Premium],
         showInResult: true,
-        result: "Sink (USD)",
+        result: "Sink 🚰",
         plan: {
           [Economy]: 350,
           [Standard]: 700,
@@ -79,7 +79,7 @@ export const questions = [
         componentType: dropdown,
         options: [Economy, Standard, Premium],
         showInResult: true,
-        result: "Bathtub (USD)",
+        result: "Bathtub 🛀",
         plan: {
           [Economy]: 800,
           [Standard]: 1500,
