@@ -14,6 +14,8 @@ import {
 } from "../enum/type";
 export const BATHROOM_SIZE_KEY = "j";
 export const BUDGET_KEY = "a-a";
+export const TILING_KEY = "tiliing";
+export const TILING_KEY_CHOICE = "tiliing_choice";
 export const questions = [
   {
     order: 1,
@@ -97,14 +99,14 @@ export const questions = [
     yesDependencies: [
       {
         order: 1,
-        key: "g",
+        key: TILING_KEY_CHOICE,
         title: "Do you prefer ceramic or marble floor tiling?",
         componentType: dropdown,
         options: ["ceramic", "marble"],
         ceramicDependencies: [
           {
             order: 1,
-            key: "h",
+            key: TILING_KEY,
             title: "Choose your ceramic?",
             componentType: dropdownWithInputSpace,
             options: [Economy, Standard, Premium],
@@ -121,7 +123,7 @@ export const questions = [
         marbleDependencies: [
           {
             order: 1,
-            key: "i",
+            key: TILING_KEY,
             title: "Choose your marble flooring?",
             componentType: dropdownWithInputSpace,
             options: [Economy, Standard, Premium],

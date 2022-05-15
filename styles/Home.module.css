@@ -95,10 +95,10 @@
 
 .resultContainer {
   display: flex;
-  flex-direction: row;
-  gap: 50px;
+  flex-direction: column;
   margin-top: 20px;
   width: 100%;
+  margin-left:20px
 }
 .resultContainer > div {
   min-width:130px;
@@ -127,7 +127,31 @@
 }
 .green {
   color: green;
+  background-color: #000!important;
 }
 .red {
   color: red;
+  background-color: #000!important;
+}
+
+.table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  text-align: left;
+}
+
+
+.table >tr>th{
+  border: 1px solid #dddddd;
+  background-color: gray;
+  text-align: left;
+  padding: 8px;
+  font-size: 16px;
+}
+.table >tr>td {
+  border: 1px solid #dddddd;
+  background-color: #dddddd;
+  text-align: left;
+  padding: 8px;
 }
