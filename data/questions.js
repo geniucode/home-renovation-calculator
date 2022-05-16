@@ -129,7 +129,7 @@ export const questions = [
             options: [Economy, Standard, Premium],
             componentProps: { type: "number", label: "space m2" },
             showInResult: true,
-            result: "Marble (USD)",
+            result: "Marble",
             plan: {
               [Economy]: 50,
               [Standard]: 95,
@@ -145,7 +145,7 @@ export const questions = [
         componentType: dropdown,
         options: [Small, Medium, Large],
         showInResult: true,
-        result: "Bathroom size (USD)",
+        result: "Bathroom size",
         plan: {
           [Small]: 9,
           [Medium]: 12,

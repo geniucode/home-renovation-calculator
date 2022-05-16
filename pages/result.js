@@ -93,12 +93,12 @@ export default function Result() {
       const elem = allQuestion.find((elem) => elem.key === key);
       if (!elem.hiddenNumber) {
         if (key !== TILING_KEY && key !== BATHROOM_SIZE_KEY) {
-          return elem.plan[questionAtom[key]];
+          return `$${elem.plan[questionAtom[key]]}`;
         } else if(key === BATHROOM_SIZE_KEY) {
           return ''
         }else{
-          return (elem.plan[questionAtom[key].text] * questionAtom[key].space)* 
-          getQuestion(BATHROOM_SIZE_KEY).plan[questionAtom[BATHROOM_SIZE_KEY]];
+          return `$${(elem.plan[questionAtom[key].text] * questionAtom[key].space)* 
+            getQuestion(BATHROOM_SIZE_KEY).plan[questionAtom[BATHROOM_SIZE_KEY]]}`
         }
       }
     },
